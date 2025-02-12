@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emerald Studios - Blog</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Blog</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+      <a href="/blog">Blog</a>
+    </nav>
+  </header>
+  <main>
+    <section class="blog-posts">
+      <% blogPosts.forEach(post => { %>
+        <div class="blog-post">
+          <h2><%= post.title %></h2>
+          <p><%= post.content %></p>
+          <p><small>Posted on <%= post.date_created.toDateString() %></small></p>
+        </div>
+      <% }) %>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Emerald Studios. All rights reserved.</p>
+  </footer>
+  <script src="/js/script.js"></script>
+</body>
+</html>
